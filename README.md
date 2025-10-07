@@ -1,1 +1,0 @@
-# Figma---Order-Summary-Component
