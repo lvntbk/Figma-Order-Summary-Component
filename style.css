@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  /* 🌇 Gökyüzü renk geçişi */
+  background: linear-gradient(180deg, #a0c4ff 0%, #89b4f8 40%, #e6efff 100%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🌆 Arka plandaki şehir silüeti */
+body::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: url("images/Combined Shape Copypng") repeat-x;
+  background-size: cover;
+  opacity: 0.3; /* daha soft görünüm */
+  z-index: 0;
+}
+
+/* 🧾 Kart alanı */
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  width: 450px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+/* 🎧 Üstteki görsel */
+.card-image {
+  height: 220px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #382ae1;
+  padding: 20px 0;
+}
+
+.card-image img {
+  width: 420px;
+  max-width: none;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* 📄 İçerik */
+.card-content {
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.card-content h2 {
+  color: #1f2f56;
+  font-size: 24px;
+}
+
+.card-content p {
+  color: #6b708d;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+button.payment {
+  background-color: #382ae1;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button.payment:hover {
+  background-color: #6b59ff;
+}
+
+a.cancel {
+  color: #6b708d;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a.cancel:hover {
+  color: #1f2f56;
+}
